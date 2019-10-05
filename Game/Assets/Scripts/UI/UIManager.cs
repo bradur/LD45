@@ -8,14 +8,20 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour {
 
+    public static UIManager main;
+
+    void Awake() {
+        main = this;
+    }
+
     [SerializeField]
     private CrossHair crossHair;
     [SerializeField]
     private AnimateTextPerCharacter animateText;
 
-    public void MouseDetectObjectOn() {
+    public void MouseDetectObjectOn(string message) {
         crossHair.TurnOn();
-        animateText.TurnOn("Test this thing\n how about next row?\nnice!");
+        animateText.TurnOn(message);
     }
 
     public void MouseDetectObjectOff() {

@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 
-[System.Serializable]
+/*[System.Serializable]
 public class RayCastOnEvent : UnityEvent
 {
 
@@ -17,7 +17,7 @@ public class RayCastOnEvent : UnityEvent
 public class RayCastOutEvent : UnityEvent
 {
 
-}
+}*/
 
 public class RayCastDetectObject : MonoBehaviour {
 
@@ -26,8 +26,8 @@ public class RayCastDetectObject : MonoBehaviour {
     [SerializeField]
     private float maxDistance = 1000;
 
-    public RayCastOnEvent rayCastOnEvent;
-    public RayCastOutEvent rayCastOutEvent;
+    /*public RayCastOnEvent rayCastOnEvent;
+    public RayCastOutEvent rayCastOutEvent;*/
 
     private List<PlayerMouseOverEffect> mouseOverEffects = new List<PlayerMouseOverEffect>();
 
@@ -49,13 +49,13 @@ public class RayCastDetectObject : MonoBehaviour {
                 if (!mouseOverEffects.Contains(mouseOver)) {
                     mouseOverEffects.Add(mouseOver);
                     mouseOver.MouseOver();
-                    rayCastOnEvent.Invoke();
+                    //rayCastOnEvent.Invoke();
                 }
             }
         }
-        else if (mouseOverEffects.Count > 0) {
+        /*else if (mouseOverEffects.Count > 0) {
             rayCastOutEvent.Invoke();
-        }
+        }*/
         for(int index = mouseOverEffects.Count - 1; index >= 0; index -= 1) {
             PlayerMouseOverEffect mouseOverEffect = mouseOverEffects[index];
             if (mouseOverEffect != mouseOver) {

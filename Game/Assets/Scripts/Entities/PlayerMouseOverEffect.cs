@@ -33,7 +33,7 @@ public class PlayerMouseOverEffect : MonoBehaviour {
             playerMouseOverEffectEvent = new PlayerMouseOverEffectEvent();
         }
         playerMouseOverEffectEvent.Invoke();
-        Debug.Log("MouseOver: " + name);
+//        Debug.Log("MouseOver: " + name);
     }
 
     public void MouseOut() {
@@ -42,6 +42,6 @@ public class PlayerMouseOverEffect : MonoBehaviour {
             playerMouseOutEffectEvent = new PlayerMouseOutEffectEvent();
         }
         playerMouseOutEffectEvent.Invoke();
-        Debug.Log("MouseOut: " + name);
+  //      Debug.Log("MouseOut: " + name);
     }
 }
