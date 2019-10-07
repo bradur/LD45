@@ -71,7 +71,7 @@ public class Drone : MonoBehaviour
     {
         if (innerLight)
         {
-            //innerLight.enabled = true;
+            innerLight.enabled = true;
         }
         if (rotateRandomly)
         {
@@ -79,7 +79,7 @@ public class Drone : MonoBehaviour
         }
         if (turnUpTheLight)
         {
-            //turnUpTheLight.TurnUp();
+            turnUpTheLight.TurnUp();
         }
         /*if (animateIntensity)
         {

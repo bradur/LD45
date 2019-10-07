@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 976618199735974410}
   - component: {fileID: 976618199735974411}
   - component: {fileID: 976618199735974408}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 976618200248968751}
   - component: {fileID: 976618200248968748}
   - component: {fileID: 976618200248968749}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 976618200614151874}
   - component: {fileID: 976618200614151876}
   - component: {fileID: 976618200614151877}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,8 +276,8 @@ GameObject:
   - component: {fileID: 976618200838848610}
   - component: {fileID: 976618200838848611}
   - component: {fileID: 976618200838848608}
-  m_Layer: 11
-  m_Name: Projectile
+  m_Layer: 8
+  m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 976618201190879163}
   - component: {fileID: 976618201190879160}
   - component: {fileID: 976618201190879161}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Capsule (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 976618201481223900}
   - component: {fileID: 976618201481223901}
   - component: {fileID: 976618201481223898}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

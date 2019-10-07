@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1687812933077940550}
   - component: {fileID: 1687812933077940551}
   - component: {fileID: 1687812933077940544}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spheroid_transparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,14 +88,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1687812933507220713}
   - component: {fileID: 1687812933507220715}
-  - component: {fileID: 1687812933507220714}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: innerlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1687812933507220713
 Transform:
   m_ObjectHideFlags: 0
@@ -117,17 +116,17 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687812933507220708}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.9887359, g: 1, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 1
+  m_Intensity: 5
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -163,53 +162,13 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &1687812933507220714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687812933507220708}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  strength: 1
-  overrideColor: 0
-  overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 1}
-  useShadow: 1
-  shadowMapRenderTexture: {fileID: 0}
-  useCookie: 0
-  cookieMapRenderTexture: {fileID: 0}
-  enableOutOfPhaseColor: 0
-  outOfPhaseColorStrength: 0.1
-  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
-  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
-    type: 3}
-  shadowDataRenderTexture: {fileID: 0}
-  customDistanceFalloffThreshold: 0.026
-  customDistanceFalloffPower: 2
-  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
-    type: 3}
-  customCookieDistanceFalloffStartThreshold: 0.1
-  customCookieDistanceFalloffEndThreshold: 0.25
-  customCookieDistanceFalloffPower: 2
-  customAngularFalloffThreshold: 0.8
-  customAngularFalloffPower: 2
-  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
-    type: 3}
-  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
-    type: 3}
-  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
-    type: 3}
 --- !u!1 &1687812933664387735
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +184,7 @@ GameObject:
   - component: {fileID: 1687812933664387733}
   - component: {fileID: 1687812933664387737}
   - component: {fileID: 1687812933664387736}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spheroid_hollow
   m_TagString: Drone
   m_Icon: {fileID: 0}
@@ -392,7 +351,7 @@ GameObject:
   - component: {fileID: 1687812933780202309}
   - component: {fileID: 406872713027383054}
   - component: {fileID: 45125198646110062}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Drone
   m_TagString: Drone
   m_Icon: {fileID: 0}
@@ -430,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggable: 1
-  innerLight: {fileID: 0}
+  innerLight: {fileID: 1687812933507220715}
   repairedOrbitSpeed: 5
   originalOrbitSpeed: 1
   needsRepair: 1
@@ -504,8 +463,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightObject: {fileID: 1687812933507220715}
-  targetIntensity: 34
-  targetRange: 12
+  targetIntensity: 5
+  targetRange: 3
   duration: 2
 --- !u!114 &1687812933780202304
 MonoBehaviour:
@@ -554,7 +513,7 @@ MonoBehaviour:
   detectDistance: 200
   enemyMask:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 1280
   drawDebugSphere: 0
 --- !u!114 &45125198646110062
 MonoBehaviour:
@@ -589,7 +548,7 @@ GameObject:
   - component: {fileID: 1687812933953666966}
   - component: {fileID: 1687812933953666964}
   - component: {fileID: 1687812933953666965}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spheroid_intact
   m_TagString: Untagged
   m_Icon: {fileID: 0}

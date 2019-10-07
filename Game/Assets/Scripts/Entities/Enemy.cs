@@ -99,7 +99,7 @@ public class Enemy : MonoBehaviour
             EnemyProjectile projectile = Instantiate(projectilePrefab);
             SoundManager.main.PlaySound(SoundType.EnemyShoot);
             projectile.transform.position = transform.position;
-            projectile.Initialize(target, 0.5f);
+            projectile.Initialize(target, 5f);
             animateShader.Pulse();
         }
     }

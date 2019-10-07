@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7719826834623379331}
   - component: {fileID: 609618043042445133}
   - component: {fileID: 2432426849020174784}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2042132019730529398}
   - component: {fileID: 2042132019730529399}
   - component: {fileID: 2042132019730529396}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 2042132019939399652}
   - component: {fileID: 2042132019939399653}
   - component: {fileID: 2042132019939399650}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 2042132020127467217}
   - component: {fileID: 2042132020127467230}
   - component: {fileID: 2042132020127467231}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: -6879701444900924967}
   - component: {fileID: -8739406239212224145}
   - component: {fileID: -7511281091956423074}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1123589036143816624}
   - component: {fileID: 1181367359299458626}
   - component: {fileID: 1818676857774345679}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Capsule (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8586694271544523724}
   - component: {fileID: 7378930495649368406}
   - component: {fileID: 8586694271544523726}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: FriendProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 8586694271642150258}
   - component: {fileID: 8586694271642150259}
   - component: {fileID: 8586694271642150260}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 8586694272031224853}
   - component: {fileID: 8586694272031224854}
   - component: {fileID: 8586694272031224855}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Capsule (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 8586694272581173668}
   - component: {fileID: 8586694272581173669}
   - component: {fileID: 8586694272581173670}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 8586694273240522113}
   - component: {fileID: 8586694273240522114}
   - component: {fileID: 8586694273240522115}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

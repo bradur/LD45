@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PlayerFollower
-  - Fuel
   - Drone
-  - PlayerFollowerDrone
+  - Fuel
   - Dome
+  - PlayerFollower
+  - PlayerFollowerDrone
   layers:
   - Default
   - TransparentFX
@@ -18,12 +18,12 @@ TagManager:
   - UI
   - 
   - 
-  - SkyTarget
-  - Platform
-  - Drone
   - EnemyProjectile
-  - Enemy
   - Projectile
+  - Enemy
+  - Drone
+  - SkyTarget
+  - 
   - 
   - 
   - 
