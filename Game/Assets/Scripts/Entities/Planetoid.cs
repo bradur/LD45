@@ -19,6 +19,9 @@ public class Planetoid : MonoBehaviour {
     [SerializeField]
     [TextArea]
     private List<string> messages;
+    [SerializeField]
+    [TextArea]
+    private List<string> info;
 
     private void Start() {
         mouseDrag3D = GetComponent<MouseDrag3D>();
@@ -29,7 +32,10 @@ public class Planetoid : MonoBehaviour {
     public void TargetOn() {
         targeted = true;
         if (!Input.GetMouseButton(0)) {
-            UIManager.main.MouseDetectObjectOn(messages);
+            UIManager.main.MouseDetectObjectOn(
+                messages,
+                info
+            );
         }
     }
 

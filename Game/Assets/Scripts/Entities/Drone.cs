@@ -18,6 +18,10 @@ public class Drone : MonoBehaviour
     private FollowOrbit orbiter;
 
     [SerializeField]
+    private bool draggable = true;
+    private MouseDrag3D mouseDrag3D;
+
+    [SerializeField]
     private Light innerLight;
 
     [SerializeField]
@@ -35,6 +39,15 @@ public class Drone : MonoBehaviour
 
     [SerializeField]
     [TextArea]
+    private List<string> info;
+
+
+    [SerializeField]
+    [TextArea]
+    private List<string> repairedInfo;
+
+    [SerializeField]
+    [TextArea]
     private List<string> repairedMessages;
 
     private void Start()
@@ -45,11 +58,13 @@ public class Drone : MonoBehaviour
         orbiter = GetComponent<FollowOrbit>();
         animateIntensity = GetComponent<AnimateShaderColorPropertyIntensity>();
         orbiter.SetSpeed(originalOrbitSpeed);
+        mouseDrag3D = GetComponent<MouseDrag3D>();
     }
 
     public void Repair()
     {
-        if (innerLight) {
+        if (innerLight)
+        {
             innerLight.enabled = true;
         }
         if (rotateRandomly)
@@ -60,7 +75,8 @@ public class Drone : MonoBehaviour
         {
             turnUpTheLight.TurnUp();
         }
-        if (animateIntensity) {
+        if (animateIntensity)
+        {
             animateIntensity.enabled = true;
         }
         needsRepair = false;
@@ -68,21 +84,68 @@ public class Drone : MonoBehaviour
             flickerLightIntensity.enabled = true;
         }*/
 
+        /*if (mouseDrag3D) {
+            mouseDrag3D.enabled = true;
+        }*/
         orbiter.SetSpeed(repairedOrbitSpeed);
+    }
+
+
+    private void Update()
+    {
+        if (draggable && mouseDrag3D)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                if (targeted)
+                {
+                    mouseDrag3D.StartDragging();
+                }
+            }
+            else
+            {
+                if (mouseDrag3D.Dragging && !targeted)
+                {
+                    TargetOffForReal();
+                }
+                mouseDrag3D.StopDragging();
+            }
+        }
     }
 
     public void TargetOn()
     {
         targeted = true;
-        UIManager.main.MouseDetectObjectOn(needsRepair ? messages : repairedMessages);
-        orbiter.SetSpeed(0);
+        if (!mouseDrag3D.Dragging)
+        {
+            TargetOnForReal();
+        }
+    }
+
+    private void TargetOnForReal()
+    {
+        UIManager.main.MouseDetectObjectOn(
+            needsRepair ? messages : repairedMessages,
+            needsRepair ? info : repairedInfo
+        );
+        orbiter.StopOrbiting();
+    }
+
+    private void TargetOffForReal()
+    {
+        orbiter.SetSpeed(needsRepair ? originalOrbitSpeed : repairedOrbitSpeed);
+        UIManager.main.MouseDetectObjectOff();
+        orbiter.StartOrbiting();
+
     }
 
     public void TargetOff()
     {
         targeted = false;
-        UIManager.main.MouseDetectObjectOff();
-        orbiter.SetSpeed(needsRepair ? originalOrbitSpeed : repairedOrbitSpeed);
+        if (!mouseDrag3D.Dragging)
+        {
+            TargetOffForReal();
+        }
     }
 
     public void OnChildCollisionEnter(Collision collision)

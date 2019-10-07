@@ -11,21 +11,44 @@ public class MouseDrag3D : MonoBehaviour
     private Transform playerFollower;
     private Transform originalParent;
 
+    [SerializeField]
+    private bool forDrone = false;
+
     private bool dragging = false;
+    public bool Dragging { get { return dragging; } }
     private void Start()
     {
         originalParent = transform.parent;
-        playerFollower = GameObject.FindGameObjectWithTag("PlayerFollower").transform;
+        if (forDrone)
+        {
+            playerFollower = GameObject.FindGameObjectWithTag("PlayerFollowerDrone").transform;
+        }
+        else
+        {
+            playerFollower = GameObject.FindGameObjectWithTag("PlayerFollower").transform;
+
+        }
     }
     public void StartDragging()
     {
         if (!dragging)
         {
-            Debug.Log("Start dragging");
+            //Debug.Log("Start dragging " + playerFollower.name);
             dragging = true;
+
             transform.SetParent(playerFollower, true);
         }
     }
+
+    /*void Update() {
+        if (dragging) {
+            transform.RotateAround(
+                playerFollower.transform.position,
+                Vector3.up,
+                playerFollower.transform.eulerAngles.y
+            );
+        }
+    }*/
 
     public void StopDragging()
     {

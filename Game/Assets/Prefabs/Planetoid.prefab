@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7518490853224588015
+--- !u!1 &2073429669525011099
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,183 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7518490853224588014}
-  - component: {fileID: 7518490853224588012}
-  - component: {fileID: 7518490853224588013}
+  - component: {fileID: 2073429669525011078}
+  - component: {fileID: 2073429669525011077}
+  - component: {fileID: 2073429669525011079}
+  - component: {fileID: 2073429669525011096}
+  - component: {fileID: 2073429669525011097}
+  - component: {fileID: 2073429669525011098}
+  - component: {fileID: 2073429669525011076}
   m_Layer: 0
-  m_Name: spheroid_intact
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Name: Planetoid
+  m_TagString: Fuel
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7518490853224588014
+  m_IsActive: 1
+--- !u!4 &2073429669525011078
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853224588015}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: -30}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2073429669644626770}
+  - {fileID: 2073429671492609618}
+  - {fileID: 2073429669789457709}
+  - {fileID: 2073429670097313922}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073429669525011077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bc6326c80069f48a02808dcb1ba103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggable: 1
+  messages:
+  - "Superheated plasma\r\n- Highly volatile\r\n- Magnificent fuel"
+  info:
+  - Hold down mouse to grab
+--- !u!114 &2073429669525011079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0fb2049397d4b43a176dbdbd67b2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 4
+  speed: 0.84
+--- !u!114 &2073429669525011096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7619bf780a05c97488e314a8c3ed970a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 0.5
+  maxIntensity: 1
+  speed: 1
+  lightObject: {fileID: 2073429669789457711}
+--- !u!114 &2073429669525011097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff4878b567fecc489f20cf567f054e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  propertyName: _EmissionColor
+  originalIntensity: 0
+  targetIntensity: 0.5
+  color: {r: 0, g: 0.082891926, b: 0.7490196, a: 1}
+  meshRenderer: {fileID: 2073429670097313924}
+--- !u!114 &2073429669525011098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3741c42a082854181c54cf69906bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObject: {fileID: 2073429669789457711}
+  targetIntensity: 36
+  targetRange: 3
+  duration: 0.3
+--- !u!114 &2073429669525011076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669525011099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3982071aeafd8418cc9dac097a9982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forDrone: 0
+--- !u!1 &2073429669644626771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073429669644626770}
+  - component: {fileID: 2073429669644626782}
+  - component: {fileID: 2073429669644626783}
+  - component: {fileID: 2073429669644626768}
+  - component: {fileID: 2073429669644626769}
+  - component: {fileID: 2073429669644626781}
+  m_Layer: 8
+  m_Name: spheroid_hollow
+  m_TagString: Fuel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2073429669644626770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669644626771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
-  m_Father: {fileID: 7518490853931810362}
-  m_RootOrder: 1
+  m_Father: {fileID: 2073429669525011078}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7518490853224588012
+--- !u!33 &2073429669644626782
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853224588015}
-  m_Mesh: {fileID: 289301614986012343, guid: 7af5366f84038ed4c84228fb46e53154, type: 3}
---- !u!23 &7518490853224588013
+  m_GameObject: {fileID: 2073429669644626771}
+  m_Mesh: {fileID: 289301614986012343, guid: 491cf9d8d8619924dae3e6942a2d4aa5, type: 3}
+--- !u!23 &2073429669644626783
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853224588015}
-  m_Enabled: 1
+  m_GameObject: {fileID: 2073429669644626771}
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -78,7 +215,77 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7518490853667871132
+--- !u!64 &2073429669644626768
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669644626771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 289301614986012343, guid: 491cf9d8d8619924dae3e6942a2d4aa5, type: 3}
+--- !u!114 &2073429669644626769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669644626771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e6ab8c9a3858a45accc776fc68d56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMouseOverEffectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2073429669525011077}
+        m_MethodName: TargetOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerMouseOutEffectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2073429669525011077}
+        m_MethodName: TargetOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!54 &2073429669644626781
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073429669644626771}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 10
+  m_AngularDrag: 10
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &2073429669789457696
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,9 +293,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7518490853667871121}
-  - component: {fileID: 7518490853667871123}
-  - component: {fileID: 7518490853667871122}
+  - component: {fileID: 2073429669789457709}
+  - component: {fileID: 2073429669789457711}
+  - component: {fileID: 2073429669789457710}
   m_Layer: 0
   m_Name: innerlight
   m_TagString: Untagged
@@ -96,32 +303,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7518490853667871121
+--- !u!4 &2073429669789457709
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853667871132}
+  m_GameObject: {fileID: 2073429669789457696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7518490853931810362}
+  m_Father: {fileID: 2073429669525011078}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &7518490853667871123
+--- !u!108 &2073429669789457711
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853667871132}
+  m_GameObject: {fileID: 2073429669789457696}
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.2509804, g: 0.6117647, b: 0.7686275, a: 1}
-  m_Intensity: 35.1
+  m_Intensity: 10
   m_Range: 2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -170,13 +377,13 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7518490853667871122
+--- !u!114 &2073429669789457710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853667871132}
+  m_GameObject: {fileID: 2073429669789457696}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
@@ -210,7 +417,7 @@ MonoBehaviour:
     type: 3}
   storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
     type: 3}
---- !u!1 &7518490853931810343
+--- !u!1 &2073429670097313925
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,180 +425,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7518490853931810362}
-  - component: {fileID: 7518490853931810361}
-  - component: {fileID: 7518490853931810363}
-  - component: {fileID: 7518490853931810340}
-  - component: {fileID: 7518490853931810341}
-  - component: {fileID: 7518490853931810342}
-  - component: {fileID: 7518490853931810360}
+  - component: {fileID: 2073429670097313922}
+  - component: {fileID: 2073429670097313923}
+  - component: {fileID: 2073429670097313924}
   m_Layer: 0
-  m_Name: Planetoid
+  m_Name: spheroid_transparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7518490853931810362
+  m_IsActive: 0
+--- !u!4 &2073429670097313922
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.02, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7518490854014037998}
-  - {fileID: 7518490853224588014}
-  - {fileID: 7518490853667871121}
-  - {fileID: 7518490854635086910}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7518490853931810361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42bc6326c80069f48a02808dcb1ba103, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  message: 'Superheated plasma
-
-    - Highly volatile
-
-    - Magnificent fuel'
---- !u!114 &7518490853931810363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0fb2049397d4b43a176dbdbd67b2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interval: 4
-  speed: 0.84
---- !u!114 &7518490853931810340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7619bf780a05c97488e314a8c3ed970a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minIntensity: 0.5
-  maxIntensity: 1
-  speed: 1
-  lightObject: {fileID: 7518490853667871123}
---- !u!114 &7518490853931810341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ff4878b567fecc489f20cf567f054e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 3
-  propertyName: _EmissionColor
-  originalIntensity: 0
-  targetIntensity: 0.5
-  color: {r: 0, g: 0.082891926, b: 0.7490196, a: 1}
-  meshRenderer: {fileID: 7518490854635086904}
---- !u!114 &7518490853931810342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c3741c42a082854181c54cf69906bb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightObject: {fileID: 7518490853667871123}
-  targetIntensity: 36
-  targetRange: 3
-  duration: 0.3
---- !u!114 &7518490853931810360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490853931810343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3982071aeafd8418cc9dac097a9982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &7518490854014037999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7518490854014037998}
-  - component: {fileID: 7518490854014037986}
-  - component: {fileID: 7518490854014037987}
-  - component: {fileID: 7518490854014037996}
-  - component: {fileID: 7518490854014037997}
-  m_Layer: 8
-  m_Name: spheroid_hollow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7518490854014037998
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854014037999}
+  m_GameObject: {fileID: 2073429670097313925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7518490853931810362}
-  m_RootOrder: 0
+  m_Father: {fileID: 2073429669525011078}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7518490854014037986
+--- !u!33 &2073429670097313923
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854014037999}
+  m_GameObject: {fileID: 2073429670097313925}
   m_Mesh: {fileID: 289301614986012343, guid: 491cf9d8d8619924dae3e6942a2d4aa5, type: 3}
---- !u!23 &7518490854014037987
+--- !u!23 &2073429670097313924
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854014037999}
+  m_GameObject: {fileID: 2073429670097313925}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -402,7 +474,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7b012fa058c462642933e26201c70bfe, type: 2}
+  - {fileID: 2100000, guid: fc46322b815b48f4493e338d665684d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -423,61 +495,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7518490854014037996
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854014037999}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 289301614986012343, guid: 491cf9d8d8619924dae3e6942a2d4aa5, type: 3}
---- !u!114 &7518490854014037997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854014037999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e6ab8c9a3858a45accc776fc68d56b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMouseOverEffectEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7518490853931810361}
-        m_MethodName: TargetOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  playerMouseOutEffectEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7518490853931810361}
-        m_MethodName: TargetOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!1 &7518490854635086905
+--- !u!1 &2073429671492609619
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,46 +503,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7518490854635086910}
-  - component: {fileID: 7518490854635086911}
-  - component: {fileID: 7518490854635086904}
+  - component: {fileID: 2073429671492609618}
+  - component: {fileID: 2073429671492609616}
+  - component: {fileID: 2073429671492609617}
   m_Layer: 0
-  m_Name: spheroid_transparent
+  m_Name: spheroid_intact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &7518490854635086910
+--- !u!4 &2073429671492609618
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854635086905}
+  m_GameObject: {fileID: 2073429671492609619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7518490853931810362}
-  m_RootOrder: 3
+  m_Father: {fileID: 2073429669525011078}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7518490854635086911
+--- !u!33 &2073429671492609616
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854635086905}
-  m_Mesh: {fileID: 289301614986012343, guid: 491cf9d8d8619924dae3e6942a2d4aa5, type: 3}
---- !u!23 &7518490854635086904
+  m_GameObject: {fileID: 2073429671492609619}
+  m_Mesh: {fileID: 289301614986012343, guid: 7af5366f84038ed4c84228fb46e53154, type: 3}
+--- !u!23 &2073429671492609617
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518490854635086905}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2073429671492609619}
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -534,7 +552,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc46322b815b48f4493e338d665684d4, type: 2}
+  - {fileID: 2100000, guid: 7b012fa058c462642933e26201c70bfe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

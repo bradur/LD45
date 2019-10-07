@@ -8,7 +8,6 @@ using System.Collections;
 public class FollowOrbit : MonoBehaviour
 {
 
-    [SerializeField]
     private Transform orbitTarget;
 
     private bool isOrbiting = true;
@@ -18,11 +17,19 @@ public class FollowOrbit : MonoBehaviour
 
     void Start()
     {
-
+        orbitTarget = GameObject.FindGameObjectWithTag("Dome").transform;
     }
 
     public void SetSpeed(float orbitSpeed) {
         degreesPerSecond = orbitSpeed;
+    }
+
+    public void StopOrbiting () {
+        isOrbiting = false;
+    }
+
+    public void StartOrbiting() {
+        isOrbiting = true;
     }
 
     void Update()

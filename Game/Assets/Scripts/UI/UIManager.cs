@@ -18,16 +18,20 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private CrossHair crossHair;
     [SerializeField]
-    private AnimateTextPerCharacter animateText;
+    private AnimateTextPerCharacter animateMessage;
+    [SerializeField]
+    private AnimateTextPerCharacter animateInfo;
 
-    public void MouseDetectObjectOn(List<string> messages) {
+    public void MouseDetectObjectOn(List<string> messages, List<string> info) {
         crossHair.TurnOn();
-        animateText.TurnOn(messages, 20f);
+        animateMessage.TurnOn(messages, 20f);
+        animateInfo.TurnOn(info, 100f);
     }
 
     public void MouseDetectObjectOff() {
         crossHair.TurnOff();
-        animateText.TurnOff();
+        animateMessage.TurnOff();
+        animateInfo.TurnOff();
     }
 
 }
