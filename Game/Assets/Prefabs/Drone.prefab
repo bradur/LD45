@@ -95,7 +95,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1687812933507220713
 Transform:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687812933507220708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
@@ -390,6 +390,8 @@ GameObject:
   - component: {fileID: 1687812933780202334}
   - component: {fileID: 1687812933780202304}
   - component: {fileID: 1687812933780202309}
+  - component: {fileID: 406872713027383054}
+  - component: {fileID: 45125198646110062}
   m_Layer: 10
   m_Name: Drone
   m_TagString: Drone
@@ -428,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggable: 1
-  innerLight: {fileID: 1687812933507220715}
+  innerLight: {fileID: 0}
   repairedOrbitSpeed: 5
   originalOrbitSpeed: 1
   needsRepair: 1
@@ -440,6 +442,7 @@ MonoBehaviour:
   - Hold down mouse to grab
   repairedMessages:
   - "Defensive drone\r\n- Online\r\n- Stays still when targeted"
+  activateAfterRepair: {fileID: 0}
 --- !u!114 &1687812933780202307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +532,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925adc86b231d9845aff09c1d2d83936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOrbiting: 1
   degreesPerSecond: 1
+--- !u!114 &406872713027383054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687812933780202335}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b4754ecf3e77c489a9fdeffe4b0f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7378930495649368406, guid: ee53361793333da449b6a4024ebcca53,
+    type: 3}
+  projectileSpeed: 5
+  findEnemyInterval: 1
+  shootInterval: 0.15
+  detectDistance: 200
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 6144
+  drawDebugSphere: 0
+--- !u!114 &45125198646110062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687812933780202335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e32d51d1f2a5e4f8015c9009567198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimum: 0
+  pulseMinimum: 0
+  maximum: 1
+  pulseMaximum: 0.3
+  duration: 1
+  pulseDuration: 0.1
+  propertyName: _EmissionColor
+  meshRenderer: {fileID: 1687812933664387739}
+  animate: 0
+  color: {r: 1, g: 0.8174603, b: 0, a: 1}
 --- !u!1 &1687812933953666967
 GameObject:
   m_ObjectHideFlags: 0

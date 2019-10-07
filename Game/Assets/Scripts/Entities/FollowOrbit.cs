@@ -10,6 +10,7 @@ public class FollowOrbit : MonoBehaviour
 
     private Transform orbitTarget;
 
+    [SerializeField]
     private bool isOrbiting = true;
 
     [SerializeField]

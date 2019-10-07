@@ -17,6 +17,8 @@ public class Drone : MonoBehaviour
     private AnimateShaderColorPropertyIntensity animateIntensity;
     private FollowOrbit orbiter;
 
+    private ShootAtEnemyPeriodically shootAtEnemyPeriodically;
+
     [SerializeField]
     private bool draggable = true;
     private MouseDrag3D mouseDrag3D;
@@ -57,15 +59,19 @@ public class Drone : MonoBehaviour
         flickerLightIntensity = GetComponent<PerlinFlickerLightIntensity>();
         orbiter = GetComponent<FollowOrbit>();
         animateIntensity = GetComponent<AnimateShaderColorPropertyIntensity>();
+        shootAtEnemyPeriodically = GetComponent<ShootAtEnemyPeriodically>();
         orbiter.SetSpeed(originalOrbitSpeed);
         mouseDrag3D = GetComponent<MouseDrag3D>();
     }
+    
+    [SerializeField]
+    private GameObject activateAfterRepair;
 
     public void Repair()
     {
         if (innerLight)
         {
-            innerLight.enabled = true;
+            //innerLight.enabled = true;
         }
         if (rotateRandomly)
         {
@@ -73,11 +79,14 @@ public class Drone : MonoBehaviour
         }
         if (turnUpTheLight)
         {
-            turnUpTheLight.TurnUp();
+            //turnUpTheLight.TurnUp();
         }
-        if (animateIntensity)
+        /*if (animateIntensity)
         {
             animateIntensity.enabled = true;
+        }*/
+        if (shootAtEnemyPeriodically) {
+            shootAtEnemyPeriodically.enabled = true;
         }
         needsRepair = false;
         /*if (flickerLightIntensity) {
@@ -88,6 +97,9 @@ public class Drone : MonoBehaviour
             mouseDrag3D.enabled = true;
         }*/
         orbiter.SetSpeed(repairedOrbitSpeed);
+        if (activateAfterRepair) {
+            activateAfterRepair.SetActive(true);
+        }
     }
 
 
