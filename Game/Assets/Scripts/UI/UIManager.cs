@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class UIManager : MonoBehaviour {
 
@@ -19,9 +20,9 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private AnimateTextPerCharacter animateText;
 
-    public void MouseDetectObjectOn(string message) {
+    public void MouseDetectObjectOn(List<string> messages) {
         crossHair.TurnOn();
-        animateText.TurnOn(message);
+        animateText.TurnOn(messages, 20f);
     }
 
     public void MouseDetectObjectOff() {

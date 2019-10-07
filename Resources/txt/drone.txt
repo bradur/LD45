@@ -1,0 +1,7 @@
+Defensive drone
+- Offline
+- Requires fuel
+
+Defensive drone
+- Online
+- Fires at pirates

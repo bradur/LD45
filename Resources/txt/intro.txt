@@ -1,0 +1,38 @@
+- Station control AI startup -
+
+Time and location:
+Earth year 4876.261, TAU CETI.
+Station identification: 
+DEEP SPACE RESEARCH STATION #315209.
+
+Initializing systems check.
+
+Time spent hibernating...
+131 YEARS, 21 DAYS.
+Reason for re-activation....
+NEARBY PIRATE ACTIVITY.
+
+Defensive drones...
+NO ACTIVE DRONES FOUND.
+5 DRONES UNACCOUNTED FOR.
+Drone fuel cell storage...
+DEPLETED.
+
+Station reactor...
+REACTOR FUEL AT 15%.
+Tractor beam..
+DEACTIVATED.
+Short distance communications...
+DEACTIVATED.
+
+Human personnel aboard...
+NO LIFE SIGNS DETECTED.
+
+Procedure-dictated short-term objectives:
+- Activate tractor beam
+- Activate short distance communications
+- Acquire fuel
+- Locate, activate and fuel a drone
+- Defend station from pirate sweeps
+
+- Startup finished -

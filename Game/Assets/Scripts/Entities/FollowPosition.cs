@@ -13,7 +13,7 @@ public class FollowPosition : MonoBehaviour {
     
     }
 
-    void Update () {
+    void LateUpdate () {
         transform.position = target.position;
     }
 }

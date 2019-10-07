@@ -13,7 +13,7 @@ public class FollowRotation : MonoBehaviour {
         
     }
 
-    void Update () {
+    void LateUpdate () {
         transform.rotation = target.rotation;
     }
 }

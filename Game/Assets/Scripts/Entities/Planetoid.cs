@@ -4,41 +4,44 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Planetoid : MonoBehaviour {
 
     private bool targeted = false;
 
+    [SerializeField]
+    private bool draggable = true;
     private MouseDrag3D mouseDrag3D;
     private TurnUpTheLight turnUpTheLight;
+    private RotateRandomly rotateRandomly;
 
     [SerializeField]
     [TextArea]
-    private string message = "";
+    private List<string> messages;
 
     private void Start() {
         mouseDrag3D = GetComponent<MouseDrag3D>();
         turnUpTheLight = GetComponent<TurnUpTheLight>();
+        rotateRandomly = GetComponent<RotateRandomly>();
     }
 
     public void TargetOn() {
         targeted = true;
-        turnUpTheLight.TurnUp();
         if (!Input.GetMouseButton(0)) {
-            UIManager.main.MouseDetectObjectOn(message);
+            UIManager.main.MouseDetectObjectOn(messages);
         }
     }
 
     public void TargetOff() {
         targeted = false;
-        turnUpTheLight.TurnOff();
         if (!Input.GetMouseButton(0)) {
             UIManager.main.MouseDetectObjectOff();
         }
     }
 
     private void Update() {
-        if (mouseDrag3D) { 
+        if (draggable && mouseDrag3D) { 
             if (Input.GetMouseButton(0)) {
                 if (targeted) {
                     mouseDrag3D.StartDragging();
@@ -47,5 +50,10 @@ public class Planetoid : MonoBehaviour {
                 mouseDrag3D.StopDragging();
             }
         }
+    }
+
+    public void Die() {
+        UIManager.main.MouseDetectObjectOff();
+        Destroy(gameObject);
     }
 }
